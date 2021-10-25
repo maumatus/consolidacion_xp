@@ -22,8 +22,56 @@ app.use('/bootstrap', express.static(__dirname + "/node_modules/bootstrap/dist/"
 app.use('/jquery', express.static(__dirname + "/node_modules/jquery/dist/"))
 app.use('/images', express.static(__dirname + "/assets/img/"))
 
+let itemsMenu = [
+    { route: '/', title: 'Inicio', selected: false },
+    { route: '/servicios', title: 'Servicios', selected: false },
+    { route: '/contactenos', title: 'Contáctenos', selected: false }
+]
+
 app.get("/", (req, res) => {
+    itemsMenu = itemsMenu.map((item) => {
+        if(item.route == '/'){
+            item.selected = true
+        }else{
+            item.selected = false
+        }
+        return item
+    })
+    console.log(itemsMenu)
     res.render("Inicio", {
-        layout: "Inicio"
+        layout: "Inicio",
+        itemsMenu
+    })
+})
+
+app.get("/servicios", (req, res) =>{
+    itemsMenu = itemsMenu.map((item) => {
+        if(item.route == '/servicios'){
+            item.selected = true
+        }else{
+            item.selected = false
+        }
+        return item
+    })
+    console.log(itemsMenu)
+    res.render("Servicios",{
+        layout: "Servicios",
+        itemsMenu,
+    })
+})
+
+app.get("/contactenos", (req, res) =>{
+    itemsMenu = itemsMenu.map((item) => {
+        if(item.route == '/contactenos'){
+            item.selected = true
+        }else{
+            item.selected = false
+        }
+        return item
+    })
+    console.log(itemsMenu)
+    res.render("Contactenos",{
+        layout: "Contactenos",
+        itemsMenu
     })
 })
