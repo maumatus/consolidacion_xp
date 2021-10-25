@@ -1,4 +1,24 @@
 {{> Header}}
 {{> Menu}}
-<p class="lead text-center">Página de Contáctenos</p>
+<div class="container">
+    <div class="col-4 offset-4 mt-5">
+        <h1 class="text-center">Formulario de contacto</h1>
+        <hr>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="nombre" placeholder="Password">
+            <label for="nombre">Nombre</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Correo</label>
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" name="" id="floatingTextArea" cols="30" rows="10"></textarea>
+            <label for="floatingTextArea">Mensaje</label>
+        </div>
+        <div class="d-grid gap-2 mt-3">
+            <button class="btn btn-outline-primary">Enviar</button>
+        </div>
+    </div>
+</div>
 {{> Footer}}

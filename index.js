@@ -28,11 +28,17 @@ let itemsMenu = [
     { route: '/contactenos', title: 'Contáctenos', selected: false }
 ]
 
+let itemsServicios = [
+    { image: 'images/Redes.png', title: 'Producción', description: 'Area de producción' },
+    { image: 'images/Soporte.png', title: 'Soporte', description: 'Area de Soporte.' },
+    { image: 'images/Web.png', title: 'Desarrollo', description: 'Area de Desarrollo' }
+]
+
 app.get("/", (req, res) => {
     itemsMenu = itemsMenu.map((item) => {
-        if(item.route == '/'){
+        if (item.route == '/') {
             item.selected = true
-        }else{
+        } else {
             item.selected = false
         }
         return item
@@ -44,33 +50,34 @@ app.get("/", (req, res) => {
     })
 })
 
-app.get("/servicios", (req, res) =>{
+app.get("/servicios", (req, res) => {
     itemsMenu = itemsMenu.map((item) => {
-        if(item.route == '/servicios'){
+        if (item.route == '/servicios') {
             item.selected = true
-        }else{
+        } else {
             item.selected = false
         }
         return item
     })
     console.log(itemsMenu)
-    res.render("Servicios",{
+    res.render("Servicios", {
         layout: "Servicios",
         itemsMenu,
+        itemsServicios
     })
 })
 
-app.get("/contactenos", (req, res) =>{
+app.get("/contactenos", (req, res) => {
     itemsMenu = itemsMenu.map((item) => {
-        if(item.route == '/contactenos'){
+        if (item.route == '/contactenos') {
             item.selected = true
-        }else{
+        } else {
             item.selected = false
         }
         return item
     })
     console.log(itemsMenu)
-    res.render("Contactenos",{
+    res.render("Contactenos", {
         layout: "Contactenos",
         itemsMenu
     })
