@@ -1,7 +1,6 @@
 {
   "name": "clase1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +13,15 @@
     "express-handlebars": "^5.3.4",
     "jquery": "^3.6.0",
     "nodemon": "^2.0.14"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maumatus/consolidacion_xp.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/maumatus/consolidacion_xp/issues"
+  },
+  "homepage": "https://github.com/maumatus/consolidacion_xp#readme",
+  "description": ""
 }
