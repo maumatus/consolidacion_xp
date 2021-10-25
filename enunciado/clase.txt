@@ -1,0 +1,27 @@
+Módulo 8 Consolidación 1
+
+**** Mauricio
+Crear proyecto en Github
+Invitar a los demás compañeros
+Crear proyecto en local
+Inicializar npm 
+Instalar express-handlebars
+subir proyecto a Github
+
+***** Pedro
+Implementar bootstrap y jquery desde node_modules
+Configurar handlebars
+
+***** Osman
+Crear parcial(partial) para el Navbar (Inicio, Servicios, Contáctenos)
+Las opciones del navbar las crearemos con un arreglo
+
+**** Luis
+Crear página de inicio con un carousel con tres imágenes relacionadas a servicios de tecnología.
+
+**** Claudio
+Crear página para la sección de servicios, se deben mostrar cards de boostrap y los detalles del servicio.
+
+Crear página para la sección de contáctenos, debe tener un formulario que solicite nombre, email y mensaje.
+
+
